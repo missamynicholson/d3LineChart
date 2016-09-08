@@ -13,6 +13,8 @@ export default (props) => {
 	
 	
 	return <g className="line">
-  		  <path d={lineFunc(props.data)} stroke="blue" strokeWidth="2" fill="none" />
-		</g>
+  		  <path d={lineFunc(props.data[0])} stroke={props.colour[0]} strokeWidth="2" fill="none" />
+		  <path d={lineFunc(props.data[1])} stroke={props.colour[1]}  strokeWidth="2" fill="none" />
+  		  <path d={lineFunc(props.data[2])} stroke={props.colour[2]} strokeWidth="2" fill="none" />
+	      </g>
 }

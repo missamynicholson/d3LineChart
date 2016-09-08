@@ -6,7 +6,7 @@ export default (props) => {
     translate: 'translate(0,' + (props.height - props.padding)  + ')',
     scale: props.xScale,
     orient: 'bottom',
-    ticks: 0
+    ticks: (props.data[0].length + 1)
     };
   const ySettings = {
     translate: 'translate(' + props.padding + ', 0)',

@@ -5,7 +5,7 @@ const renderCircles = (props) => {
     const circleProps = {
       cx: props.xScale(coords.x),
       cy: props.yScale(coords.y),
-      r: 5,
+      r: 2,
       fill: coords.colour,
       key: index
     };
@@ -14,5 +14,5 @@ const renderCircles = (props) => {
 };
 
 export default (props) => {
-  return <g>{ props.data.map(renderCircles(props)) }</g>
+  return  <g>{ [].concat.apply(props.data[0], props.data[1]).map(renderCircles(props)) }</g>
 }

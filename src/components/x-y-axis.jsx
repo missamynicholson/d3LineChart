@@ -6,7 +6,8 @@ export default (props) => {
 		translate: 'translate(0,' + (props.height - props.padding)  + ')',
 		scale: props.xScale,
 		orient: 'bottom',
-		ticks: (props.data[0].length + 1)
+		ticks: (props.data[0].length + 1),
+		tickFormat: ""
 	};
 	
 	const ySettings = {

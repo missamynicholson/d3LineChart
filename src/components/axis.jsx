@@ -16,7 +16,8 @@ export default class Axis extends React.Component {
 			   .orient(this.props.orient)
 			   .ticks(this.props.ticks)
 			   .scale(this.props.scale)
-			   .tickValues(this.props.tickValues);
+			   .tickValues(this.props.tickValues)
+			   .tickFormat(this.props.tickFormat)
 	       	d3.select(node).call(axis);
 	}
 	

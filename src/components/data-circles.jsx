@@ -1,12 +1,12 @@
 import React from 'react';
 
-const renderCircles = (props) => {
+const renderCircles = (props, colour) => {
 	return (coords, index) => {
 		const circleProps = {
 			cx: props.xScale(coords.x),
 			cy: props.yScale(coords.y),
 			r: 2,
-			fill: coords.colour,
+			fill: colour,
 			key: index
 		};
 		return <circle {...circleProps} />;
@@ -14,5 +14,9 @@ const renderCircles = (props) => {
 };
 
 export default (props) => {
-	return  <g>{ [].concat.apply(props.data[0], props.data[1]).map(renderCircles(props)) }</g>
+	return <svg>
+			<g>{ props.data[0].map(renderCircles(props, "black")) }</g>
+			<g>{ props.data[1].map(renderCircles(props, "blue")) }</g>
+			<g>{ props.data[2].map(renderCircles(props, "red")) }</g>
+			</svg>
 };

@@ -3,6 +3,7 @@ import d3               from 'd3';
 import DataLine         from './data-line';
 import XYAxis           from './x-y-axis';
 import AxisLabels       from './axis-labels';
+import DataCircles      from './data-circles';
 
 const xMax   = (data)  => d3.max(data, (d) => d.x);
 const yMax   = (data)  => d3.max(data, (d) => d.y);
@@ -31,5 +32,6 @@ export default (props) => {
 			<XYAxis {...d3Props}/>
 			<text y="10" x="-300" stroke="#0000" transform="rotate(-90)">{props.testName}</text>
 			<AxisLabels {...d3Props} />
+			<DataCircles {...d3Props} />
 		</svg>
 }

@@ -17,7 +17,7 @@ export default (props) => {
 		ticks: 5
 	};
 
-	return   <g className="xy-axis">
+	return  <g className="xy-axis">
 			<Axis {...xSettings}/>
 			<Axis {...ySettings}/>
 		</g>

@@ -10,14 +10,14 @@ const yMax   = (data)  => d3.max(data, (d) => d.y);
 
 const xScale = (props) => {
 	return  d3.scale.linear()
-		.domain([0, xMax([].concat.apply(props.data[0], props.data[1]))])
-		.range([props.padding, props.width - props.padding * 2]);
+		.domain( [0, xMax([].concat.apply(props.data[0], props.data[1]))] )
+		.range( [props.padding, props.width - props.padding * 2] );
 };
 
 const yScale = (props) => {
 	return  d3.scale.linear()
-		.domain([0, yMax([].concat.apply(props.data[0], props.data[1]))])
-		.range([props.height - props.padding, props.padding]);
+		.domain( [0, yMax([].concat.apply(props.data[0], props.data[1]))] )
+		.range( [props.height - props.padding, props.padding] );
 };
 
 const marshalProps = (props) => {
@@ -29,8 +29,8 @@ export default (props) => {
 	const d3Props = marshalProps(props);
 	return 	<svg width={d3Props.width} height={d3Props.height}>
 			<DataLine {...d3Props} />
-			<XYAxis {...d3Props}/>
-			<text y="10" x="-300" stroke="#0000" transform="rotate(-90)">{props.testName}</text>
+			<XYAxis {...d3Props} />
+			<text y="10" x="-300" stroke="#0000" transform="rotate(-90)">{ props.testName }</text>
 			<AxisLabels {...d3Props} />
 			<DataCircles {...d3Props} />
 		</svg>

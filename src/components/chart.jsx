@@ -73,6 +73,8 @@ export default class Chart extends React.Component {
 	}
 	
 	render() {
-		return  <div><ScatterPlot {...this.state} {...styles} {...name} {...colours} {...startDate} /></div>
+		return  <div>
+				<ScatterPlot {...this.state} {...styles} {...name} {...colours} {...startDate} />
+			</div>
 	}
 };
